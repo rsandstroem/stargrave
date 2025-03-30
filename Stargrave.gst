@@ -952,6 +952,13 @@ This figure immediately gains an additional action during this activation, and a
             <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
             <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden" scope="8f77-0290-5b40-2a4c" affects="self.entries.forces.recursive">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6939-3fb3-687a-2a0b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="983a-fdc1-e31c-f8b6" name="Antigravity Projection" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3519,15 +3526,2897 @@ Creates an impenetrable, transparent wall, up to 6” long and 3” high anywher
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Core Powers" id="8f77-0290-5b40-2a4c" hidden="false">
-      <entryLinks>
-        <entryLink import="true" name="Powers" hidden="false" id="3c58-2a49-656f-f3e1" type="selectionEntryGroup" targetId="7753-4141-f613-ae54"/>
-      </entryLinks>
-    </selectionEntryGroup>
     <selectionEntryGroup name="Other Powers" id="d187-4aa6-4f21-7b77" hidden="false">
       <entryLinks>
         <entryLink import="true" name="Powers" hidden="false" id="791d-dd71-aa6e-63a6" type="selectionEntryGroup" targetId="7753-4141-f613-ae54"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="4da1-d546-eaec-5450" name="Core Powers" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="ff98-6c68-7984-3719" name="Adrenaline Surge" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd22-6c16-c0ff-7fc9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e85c-e47a-e7bc-51ae" name="Adrenaline Surge" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6939-3fb3-687a-2a0b" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">2</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="dfe6-8fb0-9538-3f1c" name="Adrenaline Surge" hidden="false">
+              <description>Self Only
+This figure immediately gains an additional action during this activation, and an additional action in their next activation as well.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6939-3fb3-687a-2a0b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="adc5-cb64-cc6c-94cd" name="Antigravity Projection" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3329-24c3-b6cc-5666" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="6e53-2dc8-f023-259b" name="Antigravity Projection" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8702-3db8-4e88-faf8" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="da1a-8f8d-da28-276e" name="Antigravity Projection" hidden="false">
+              <description>Line of Sight
+The target figure gains the Levitate attribute (page 156) for the rest of the game.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8702-3db8-4e88-faf8" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="efec-d45b-9df4-7479" name="Armour Plates" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="871c-559f-d2fa-3008" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e1bf-ab74-1b47-2831" name="Armour Plates" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6939-3fb3-687a-2a0b" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">2</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only or Out of Game (B)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="c79e-56fc-0f5f-8ece" name="Armour Plates" hidden="false">
+              <description>Self Only or Out of Game (B)
+The figure gains +2 Armour. This power may not be used if the figure is already wearing combat armour.
+This power can be used Out of Game (B), in which case the activating figure starts the game at -2 Damage to represent the Strain.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6939-3fb3-687a-2a0b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="1325-c860-73dc-a3bc" name="Armoury" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b886-5d23-b224-de14" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7fa3-0874-f440-1a15" name="Armoury" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1510-fec4-0334-8026" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (B)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="a65a-658f-3221-8030" name="Armoury" hidden="false">
+              <description>Out of Game (B)
+The crew can field one suit of combat armour without having to pay is normal upkeep cost.
+Alternatively, one standard (not Advanced Technology) pistol, carbine, or shotgun may be given a +1 Damage modifier for the next game only.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1510-fec4-0334-8026" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="86f3-9552-92af-ad40" name="Bait and Switch" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc54-3159-a4cf-138f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="111e-f84e-26f3-c637" name="Bait and Switch" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e49-f5d3-e9cd-c200" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">2</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="2a48-bfaa-59d5-968d" name="Bait and Switch" hidden="false">
+              <description>Line of Sight
+This power may only be used against a soldier carrying a loot token. That figure must make an immediate Will Roll (TN14). If failed, the figure immediately drops the loot token and the  activator may move it up to 4” in any direction.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e49-f5d3-e9cd-c200" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="9725-f006-6642-a487" name="Break Lock" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb04-6c1c-ea97-0cd9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ef4e-05eb-66c6-2340" name="Break Lock" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e36-ac96-3132-f141" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="78d2-8781-9ecf-8850" name="Break Lock" hidden="false">
+              <description>Line of Sight
+Immediately unlocks one physical-loot counter.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e36-ac96-3132-f141" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="e084-1ec7-ab9e-ec5a" name="Bribe" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76c0-1deb-6650-0c96" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ec3b-e654-46a4-dc59" name="Bribe" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e49-f5d3-e9cd-c200" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">14</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (B)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="1abd-fecd-02a7-9471" name="Bribe" hidden="false">
+              <description>Out of Game (B)
+If successful, place one bribe token next to the table and make your opponent aware of it. At any point of the game, when your opponent declares that a soldier (not a captain or first mate) is making a Shooting attack, but before the dice are rolled, you may play your bribe token. The Shooting attack automatically misses, and no dice are rolled. No crew may use more than one bribe token in any game.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e49-f5d3-e9cd-c200" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="89da-cdc2-ad87-b4bf" name="Camouflage" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faae-d93a-fb2e-1303" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b904-907c-fd4c-dc47" name="Camouflage" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1795-c4e8-6ca2-380b" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6939-3fb3-687a-2a0b" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">2</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="f9fa-9a69-c0b6-01fb" name="Camouflage" hidden="false">
+              <description>Self Only
+No figure may draw line of sight to this figure if it is more than 12” away. In addition, it gains +2 Fight when rolling against Shooting attacks from pistol, carbine, shotgun, or rapid-fire attacks. This power is cancelled if the figure becomes stunned.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6939-3fb3-687a-2a0b" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1795-c4e8-6ca2-380b" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="9d0a-b6d4-cd0d-10cf" name="Cancel Power" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca3b-387e-a662-b473" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3720-c86a-184b-9e1f" name="Cancel Power" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e49-f5d3-e9cd-c200" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="62e8-5e11-0c78-cb3a" name="Cancel Power" hidden="false">
+              <description>Line of Sight
+Immediately cancels all effects of one ongoing Line of Sight power. It has no effect on powers with other designations.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e49-f5d3-e9cd-c200" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="c8be-68ca-8c4d-098d" name="Command" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9614-1d0f-8c9a-cb41" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1ca6-9328-6516-3e2b" name="Command" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1510-fec4-0334-8026" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="eb6f-ba9c-aaec-a0bb" name="Command" hidden="false">
+              <description>Line of Sight
+Select one member of the crew that is in line of sight. That figure now activates in the current player’s phase this turn. This power may not be used on a figure that has already activated in this turn.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1510-fec4-0334-8026" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="706d-9a5f-8c50-c1af" name="Concealed Firearm" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf1c-aebf-8c41-4b83" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e421-a27b-e182-89fc" name="Concealed Firearm" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e49-f5d3-e9cd-c200" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="b424-f90d-ff3b-b3f9" name="Concealed Firearm" hidden="false">
+              <description>Self Only
+This power may only be used while a figure is in combat. The figure may make one +5 Shooting attack against any other figure in the combat. Do not randomize the target of the attack, even if there are multiple figures in the combat. If this attack damages the target, it is automatically pushed back 1” and stunned, even if the attack did less than 4 Damage.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e49-f5d3-e9cd-c200" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="45c0-d29b-e462-a1be" name="Control Animal" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6848-89f9-f2ff-d170" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ae9a-51b2-d334-8338" name="Control Animal" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b054-68dc-0468" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="29dc-1a2f-a765-e396" name="Control Animal" hidden="false">
+              <description>Line of Sight
+This power may only be used against uncontrolled animals. The target animal must make an immediate Will Roll (TN16) or become a temporary member of the same crew as the activator. Each figure with this power may only have one animal under control at any time. They may cancel this power at any time as a free action.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2934-b054-68dc-0468" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="f5c2-3fa4-4831-bccd" name="Control Robot" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21fa-5026-21e6-c100" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8299-52dc-4771-96bd" name="Control Robot" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d84-3333-57c7-92ea" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1795-c4e8-6ca2-380b" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="3f5d-8f28-9136-370c" name="Control Robot" hidden="false">
+              <description>Line of Sight
+Select one robot in line of sight. That robot must make an immediate Will Roll (TN15). If it succeeds, nothing happens. If it fails, it immediately joins the crew of activator as a temporary member. The controlled robot may make a new Will Roll (TN15) after each of its activations. If it succeeds this power is canceled and the robot immediately reverts to its previous allegiance. A figure with this power may only have one robot under control at any time. They may cancel this power at any time as a free action.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1795-c4e8-6ca2-380b" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9d84-3333-57c7-92ea" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="1896-63b8-0fc0-78ba" name="Coordinated Fire" hidden="true" collective="false" import="true" type="upgrade">
+          <comment>Activation: 10 / Strain: 0 / Line of Sight
+The target member of the crew receives +1 Shoot for
+the duration of the game. This may not take a figure
+above +5 Shoot. A figure may only benefit from one
+Coordinated Fire Power at a time.</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c6a-1a62-58ee-8d74" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4400-8e6b-00e2-a067" name="Coordinated Fire" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1510-fec4-0334-8026" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="9e51-caa6-a8ee-2518" name="Coordinated Fire" hidden="false">
+              <description>Line of Sight
+The target member of the crew receives +1 Shoot for the duration of the game. This may not take a figure above +5 Shoot. A figure may only benefit from one Coordinated Fire Power at a time.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1510-fec4-0334-8026" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="24d2-af1e-ef47-46bf" name="Create Robot" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91ec-d203-c7f6-894e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9831-6e88-2d33-750b" name="Create Robot" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d84-3333-57c7-92ea" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">14</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (A)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="23a8-6111-d7bb-9318" name="Create Robot" hidden="false">
+              <description>Out of Game (A)
+The player may immediately add one robot soldier to their crew for no cost. This soldier can be of any type except Armoured Trooper, but the crew is still subject to the normal limitation on soldiers and specialist soldiers.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9d84-3333-57c7-92ea" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="5810-5b5c-a15f-3695" name="Dark Energy" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ef0-b5f8-ddd9-3eb5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="348c-40f3-4cb6-5f41" name="Dark Energy" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b054-68dc-0468" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="3a00-938a-2232-0a0e" name="Dark Energy" hidden="false">
+              <description>Line of Sight
+The figure makes a +5 Shooting attack against any target within 12”. This attack ignores any armour worn by a figure (so subtract a figure’s armour 1modifier from their armour). Increase this attack to +7 against robots. If this attack targets a figure in combat, do not randomize the target, it can only hit the intended target. (Armour Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2934-b054-68dc-0468" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="cd8f-e249-aed4-314d" name="Data Jump" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f933-0c22-07f0-59bd" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9ea1-5f97-92c7-5f56" name="Data Jump" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8702-3db8-4e88-faf8" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e49-f5d3-e9cd-c200" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="fa35-ed58-a988-7474" name="Data Jump" hidden="false">
+              <description>Line of Sight
+This power may only target a member of the same warband that is carrying a data-loot token. The player may immediately move the data-loot token carried by that figure to another member of the crew, provided both are in line of sight of the activator and within 8” of one another.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e49-f5d3-e9cd-c200" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8702-3db8-4e88-faf8" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="e0ef-50b4-7ece-4074" name="Data Knock" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="573d-a6b1-a095-dc99" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9278-da25-28f9-a181" name="Data Knock" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8702-3db8-4e88-faf8" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1795-c4e8-6ca2-380b" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="6ba6-0138-7e1c-2860" name="Data Knock" hidden="false">
+              <description>Line of Sight
+Immediately unlocks one data-loot counter.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1795-c4e8-6ca2-380b" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8702-3db8-4e88-faf8" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="7796-4916-f512-4b86" name="Data Skip" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2f4-f438-a173-5a48" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="05ee-b081-d9f3-bd63" name="Data Skip" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8702-3db8-4e88-faf8" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">2</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="c2fc-41f7-125d-7785" name="Data Skip" hidden="false">
+              <description>Line of Sight
+This power targets an unlocked data-loot token or a figure carrying such a token that is within 12”. If the token is not being carried, the activator may move the data-loot token 4” in any direction. If a figure is carrying the token, then that figure must make a Will Roll (TN16). If failed, the activator may move the data-loot token up to 4” in any direction. Either way, the token remains unlocked.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8702-3db8-4e88-faf8" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="c27b-c259-9903-ec2c" name="Destroy Weapon" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e330-e121-5124-118d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4e90-d386-698a-03c0" name="Destroy Weapon" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e36-ac96-3132-f141" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">2</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="28bf-e9d6-9fdd-aad0" name="Destroy Weapon" hidden="false">
+              <description>Line of Sight
+This power may be used against any figure within 12”. The activator may choose one weapon carried by that figure to be destroyed, except indestructible weapons. This weapon is replaced for free after the game. (Armour Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e36-ac96-3132-f141" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="f7ac-d784-4667-cad6" name="Drone" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b824-aa8b-4e5f-b869" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="72ea-ccf1-1a8b-44ef" name="Drone" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8702-3db8-4e88-faf8" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d84-3333-57c7-92ea" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Touch</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="83e6-0c92-6200-8b26" name="Drone" hidden="false">
+              <description>Touch
+Place a drone next to the activator (see Chapter Six: Bestiary, page 144). This drone counts as a temporary member of the crew, and may activate and move as normal. For the rest of the game, the figure may draw line of sight from the drone, instead of the figure, when using a power. This includes using Touch powers. A figure may only have one active drone at a time.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9d84-3333-57c7-92ea" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8702-3db8-4e88-faf8" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="ae17-aa25-8875-4a3e" name="Electromagnetic Pulse" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8fc-f81f-4cd5-c6a1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e0e6-2b4b-81fa-8ffb" name="Electromagnetic Pulse" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8702-3db8-4e88-faf8" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d84-3333-57c7-92ea" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="5b43-20cf-baa7-47e8" name="Electromagnetic Pulse" hidden="false">
+              <description>Line of Sight
+If targeted against a robot, that robot must make an immediate Will Roll (TN18). If it fails, it receives no actions the next time it activates.
+If targeted against a non-robot figure, all firearms carried by that figure immediately jam as though they had rolled a 1 on a Shooting attack. Additionally, the weapon suffers a -1 Damage modifier for the rest of the game. A weapon can be jammed in multiple turns through the use of this power, but the Damage modifier only applies the first time.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9d84-3333-57c7-92ea" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8702-3db8-4e88-faf8" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="0944-6234-2ab9-9820" name="Energy Shield" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ea8-c5b4-eda6-ece5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="adf2-6c65-d252-25c8" name="Energy Shield" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1510-fec4-0334-8026" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1795-c4e8-6ca2-380b" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="9dda-f8ec-b8d7-4dac" name="Energy Shield" hidden="false">
+              <description>Self Only
+A small energy shield forms around the user. This shield absorbs the next 3 points of Damage from any Shooting attack that would injure the activator. Once 3 points of Damage have been absorbed, the power is cancelled.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1795-c4e8-6ca2-380b" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1510-fec4-0334-8026" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="70c4-3c95-29e6-a5e7" name="Fling" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93a7-b8df-af4d-7481" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="6c68-00ba-eea2-70bb" name="Fling" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6939-3fb3-687a-2a0b" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">8</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only or Touch</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="7e68-b33d-bbba-5b42" name="Fling" hidden="false">
+              <description>Self Only or Touch
+This power can be used in two ways. The activator may use it while standing within 1” of a member of their crew, in which case they may immediately move that crewmember 6” in any
+direction, including up. However, the figure that was moved is immediately stunned. Alternatively, it can be used while in combat against a specific enemy figure. The target figure must
+make an immediate Fight Roll (TN16). If it fails, the activator may move the target figure up to 6” in any horizontal direction. The figure takes no Damage (unless there is another reason it would, such as falling), but is stunned. This power may not be used on any figure that has the Large attribute.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6939-3fb3-687a-2a0b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="117c-854a-91c3-306f" name="Fortune" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c71-427b-e38f-ad97" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2363-f190-e20d-8b64" name="Fortune" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1510-fec4-0334-8026" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e49-f5d3-e9cd-c200" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="dc89-caf1-e080-79ff" name="Fortune" hidden="false">
+              <description>Self Only
+Place a fortune token either next to the figure or on your crew sheet next to the figure’s entry. At any point the player may discard this token to reroll a Combat Roll, Shooting Roll, or Stat Roll made by that figure. If used, the figure must take the result of the reroll, they cannot choose to take the original roll. No figure may have more than one fortune token at one time.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e49-f5d3-e9cd-c200" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1510-fec4-0334-8026" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="21a6-a836-bcb2-0c73" name="Haggle" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ae7-9ec4-b879-9f42" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2d2c-79a1-1ddc-2ed7" name="Haggle" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e49-f5d3-e9cd-c200" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (A)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="b46e-8cd7-0340-3ebd" name="Haggle" hidden="false">
+              <description>Out of Game (A)
+This power may be used whenever the crew sells anything. The crew receives 20% more than the usual selling price. This power may only be used on the sale of one item after each game.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e49-f5d3-e9cd-c200" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="46fb-5320-b630-6284" name="Heal" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2d3-58c2-b8e3-4d13" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9f91-b1f1-63a8-8e1a" name="Heal" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b054-68dc-0468" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="2017-1d87-ecc3-477d" name="Heal" hidden="false">
+              <description>Line of Sight
+This power restores up to 5 points of lost Health to a target figure within 6”. This power cannot take a figure above its starting Health. This power has no effect on robots. (Armour  Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2934-b054-68dc-0468" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="c8d8-1650-de56-3aae" name="Holographic Wall" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="332a-7707-7f72-1949" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="bf36-31eb-283a-2187" name="Holographic Wall" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8702-3db8-4e88-faf8" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="6611-48fb-1ce3-a212" name="Holographic Wall" hidden="false">
+              <description>Line of Sight
+Creates a holographic wall 6” long and 3” high. No line of sight may be drawn through this wall. Figures may move through the wall as though it is not there. At the end of each turn, after the turn in which the wall is placed, roll a die. On a 1–4 the holograph fails, and the wall is removed.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8702-3db8-4e88-faf8" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="947c-e843-59f1-4fd3" name="Life Leach" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f957-064d-e452-31a5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="47f6-a637-68b0-b8d5" name="Life Leach" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b054-68dc-0468" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="63b1-4d40-ceed-50a5" name="Life Leach" hidden="false">
+              <description>Line of Sight
+The target must make an immediately Will Roll (TN15). If failed the target loses 3 Health and the figure using the power regains 3 Health. This may not take a figure above its starting Health. This power cannot be used against robots. A figure may use this power on a member of their own crew, but if so, that figure is immediately removed from the crew sheet
+and counts as an uncontrolled figure for the rest of the game. (Armour Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2934-b054-68dc-0468" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="18fd-a7f7-b805-7a9c" name="Lift" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4057-878a-acbb-a799" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="44bc-ed52-b91d-4eec" name="Lift" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e36-ac96-3132-f141" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="b39d-5feb-5c96-c9eb" name="Lift" hidden="false">
+              <description>Line of Sight
+Immediately move one member of the same crew that is in line of sight 6” in any direction, including vertically. If this leaves the figure hanging above the ground, it immediately drops to the ground, but takes no Damage. The figure that is moved cannot take any additional actions this turn, though may have taken actions previously this turn. This may not move a figure off the table. (Armour Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e36-ac96-3132-f141" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="faa2-7887-ee29-bb50" name="Mystic Trance" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf40-e81b-041e-0e32" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2b6f-4ed5-0ade-cfd3" name="Mystic Trance" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b054-68dc-0468" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">8</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (B)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="82da-4d28-b719-527c" name="Mystic Trance" hidden="false">
+              <description>Out of Game (B)
+If successfully activated, the figure may attempt to use one of their other powers before the first Initiative Roll as if it was an Out of Game (B) power. No power that targets a point on the table or an enemy figure can be used with Mystic Trance.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2934-b054-68dc-0468" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="d42d-d3a9-0c85-2416" name="Power Spike" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ad0-ffc7-4393-d0b1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7a3a-973a-f949-5007" name="Power Spike" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1510-fec4-0334-8026" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1795-c4e8-6ca2-380b" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">8</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="8458-a244-262c-7acd" name="Power Spike" hidden="false">
+              <description>Self Only
+The next time this figure makes a Shooting attack with a carbine, pistol, or shotgun, the shot does +3 Damage. This is cumulative with other damage modifiers for the weapon. For example, the total modifier would +4 in the case of a shotgun (+3 from Power Spike and +1 from the Shotgun).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1795-c4e8-6ca2-380b" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1510-fec4-0334-8026" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="91c7-fb81-6ce7-713c" name="Psionic Fire" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="153f-48c1-176a-95ef" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e135-1ef8-a42d-5d60" name="Psionic Fire" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e36-ac96-3132-f141" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="ecfa-c350-836e-6926" name="Psionic Fire" hidden="false">
+              <description>Self Only
+The activator should place two flamethrower templates as thought the figure had just made a flamethrower attack. These templates may be touching, but may not overlap. Every figure touching a template immediately suffers a +3 flamethrower attack (see page 32). Figures only suffer one attack even if touching both templates. (Armour Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e36-ac96-3132-f141" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="7eb9-c2ff-3d3a-bc91" name="Pull" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a73-370b-84ee-de37" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="fa75-77d0-8ad0-8894" name="Pull" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e36-ac96-3132-f141" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="c645-a626-2040-e60f" name="Pull" hidden="false">
+              <description>Line of Sight
+The target figure must make a Will Roll (TN16). If it fails, move that figure up to 6” in any horizontal direction. This may not move a figure over terrain more than 0.5” high. If this moves them off terrain that is above the ground, they fall and take Damage as normal. (Armour Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e36-ac96-3132-f141" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="24dd-467e-3f20-e66a" name="Puppet Master" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bdd2-5c08-9911-6dab" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="73fb-8198-12a6-d3d5" name="Puppet Master" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b054-68dc-0468" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">2</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Touch</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="5125-b7f9-b6bd-57d7" name="Puppet Master" hidden="false">
+              <description>Touch
+Choose one non-robot member of the crew that has been reduced to 0 Health during the game. That soldier returns to the table, adjacent to the figure activating this power. The soldier has 1 Health and counts as wounded. They are treated as a normal soldier in every other way. Any given soldier may only be returned to the table once each game through the use of Puppet Master. (Armour Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2934-b054-68dc-0468" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="46e7-c66c-34bf-65e7" name="Psychic Shield" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7964-5443-4370-2fff" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ab86-6afa-0d93-f1c7" name="Psychic Shield" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e36-ac96-3132-f141" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">2</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="77f1-7777-4015-150b" name="Psychic Shield" hidden="false">
+              <description>Line of Sight
+The target figure is surrounded by psychic energy. The next time it is hit with a Shooting attack that causes Damage of any amount, halve that Damage (rounding down), and then the power is cancelled. It this figure is ever in combat, this power is immediately cancelled. If the figure also has an active Energy Shield, deduct then 3 points of Damage for it first, then halve the remaining for the Psychic Shield. (Armour Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e36-ac96-3132-f141" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="edba-1070-0163-272e" name="Regenerate" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="203c-d4b1-61ed-c984" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a34d-4399-bd5c-6f06" name="Regenerate" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6939-3fb3-687a-2a0b" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">8</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="c1b4-fdcb-b1de-b9a6" name="Regenerate" hidden="false">
+              <description>Self Only
+The activator regains up to 3 points of lost Health.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6939-3fb3-687a-2a0b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="aaff-54b8-585c-fd9f" name="Remote Guidance" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c31-ed59-5b9d-7032" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4aea-cd6b-5caa-f603" name="Remote Guidance" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d84-3333-57c7-92ea" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (B) or Touch</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="1a37-d598-c8c4-9a9f" name="Remote Guidance" hidden="false">
+              <description>Out of Game (B) or Touch
+This power may be used on any robot soldier. That robot can always activate in the same phase as the activator, even if it is not within 3”. The player is still limited to a maximum of three soldiers activating in either the Captain or First Mate Phase. An activator may only use Remote Guidance on one robot at a time.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9d84-3333-57c7-92ea" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="2363-df6c-e5d4-402e" name="Remote Firing" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa55-9155-566b-98da" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8d4b-e2aa-ede7-b727" name="Remote Firing" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1510-fec4-0334-8026" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d84-3333-57c7-92ea" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="25ed-cd01-ea83-df7a" name="Remote Firing" hidden="false">
+              <description>Line of Sight
+This power allows the user to select one robot in the same crew that is within line of sight. That robot makes an immediate +3 Shooting attack against any legal target within 12”. This attack does not count as the robot’s activation, nor does it cost the robot an action.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9d84-3333-57c7-92ea" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1510-fec4-0334-8026" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="6b3c-cc86-cd30-9641" name="Repair Robot" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fb4-adfa-5985-fb82" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="12f3-cf35-eb0a-057d" name="Repair Robot" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d84-3333-57c7-92ea" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="2c4a-d1d6-bf20-ea12" name="Repair Robot" hidden="false">
+              <description>Line of Sight
+This power restores up to 5 points of lost Health to a target robot within 6”. This power cannot take a figure above its starting Health.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9d84-3333-57c7-92ea" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="56c6-fd4f-d644-288f" name="Restructure Body" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9509-c5f1-20b3-018b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1504-7dc6-138c-8371" name="Restructure Body" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6939-3fb3-687a-2a0b" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only or Out of Game (B)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="9443-0920-8d6b-e329" name="Restructure Body" hidden="false">
+              <description>Self Only or Out of Game (B)
+The activator gains one of the following traits of its choice: Amphibious, Burrowing, Expert Climber, Immune to Critical Hits, Immune to Toxins, or Never Wounded. It may only gain one of these traits at a time, but can change the attribute from one to another with an additional use of the power.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6939-3fb3-687a-2a0b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="4f56-dc40-275c-0678" name="Quick-Step" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6101-1c69-35b2-00e4" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ccb8-781b-4108-556d" name="Quick-Step" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e49-f5d3-e9cd-c200" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1795-c4e8-6ca2-380b" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="28fc-de40-fdfe-25c5" name="Quick-Step" hidden="false">
+              <description>Self Only
+A figure may not make a Power Move when attempting to activate this power. The activator may immediately move 4” in any direction, including out of combat. No figure may force combat during this move. The activator may not end this move within 1” of an enemy figure nor exit the table using this move. This move does not suffer any movement penalties for terrain. If the figure fails its activation, it may make a normal Power Move.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1795-c4e8-6ca2-380b" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e49-f5d3-e9cd-c200" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="fd32-6ece-d750-5575" name="Re-wire Robot" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a99-5c33-67e8-f769" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="aecc-be2d-6fa2-d72b" name="Re-wire Robot" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d84-3333-57c7-92ea" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">14</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (B)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="8ec6-86f8-b305-6218" name="Re-wire Robot" hidden="false">
+              <description>Out of Game (B)
+Select one robot in the crew. The robot may be given one of the following enhancements: +1 Move, +1 Fight, +1 Armour; however, it suffers -1 Will. These modifications are permanent. No robot may be re-wired more than once.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9d84-3333-57c7-92ea" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="3321-4046-4750-2b52" name="Suggestion" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1754-6412-affb-58d1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ff1a-f75b-9764-60c8" name="Suggestion" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifiers>
+                <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e36-ac96-3132-f141" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b054-68dc-0468" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="4644-7feb-dece-6620" name="Suggestion" hidden="false">
+              <description>Line of Sight
+The target of this power must make an immediate Will Roll (TN16). If it fails, it drops any loot it is carrying, and the activator may move the figure up to 3” in any direction, provided this does not move the figure into combat or cause it any immediate Damage (i.e. falling more than 3”). (Armour Interference).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2934-b054-68dc-0468" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e36-ac96-3132-f141" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="7188-b931-2eb2-b23a" name="Target Designation" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b67-d789-9a9e-6567" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="bc17-dac8-0a77-e615" name="Target Designation" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1510-fec4-0334-8026" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">8</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="ef4c-3da9-0857-6b4e" name="Target Designation" hidden="false">
+              <description>Line of Sight
+For the rest of the battle, this figure receives -2 Fight whenever rolling against a Shooting attack.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1510-fec4-0334-8026" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="5a9b-52ed-f6cd-b4b9" name="Target Lock" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d48-a676-fdb4-06f1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="becb-ee1d-52c8-ddf4" name="Target Lock" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1795-c4e8-6ca2-380b" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Touch</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="0c06-7f69-a82b-f891" name="Target Lock" hidden="false">
+              <description>Touch
+The activator may make an immediate grenade or grenade launcher attack as a free action against any point in range; it does not have to be in line of sight. The attack automatically hits its intended point. If this power is used during a group activation, then the grenade or grenade launcher attack can be made by another member of the crew that is within 1” and was part of the group activation.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1795-c4e8-6ca2-380b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="3ba8-f763-1ef6-b04b" name="Temporary Upgrade" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8bb6-11f2-5e2a-d67b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d7ec-97f9-639d-464f" name="Temporary Upgrade" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1795-c4e8-6ca2-380b" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="8f86-270b-aa15-a79c" name="Temporary Upgrade" hidden="false">
+              <description>Self Only
+The activator may select one of the following stat increases: +1 Move, +1 Fight, +1 Shoot, +3 Will, +1 Armour. These may not take the figure above Move (7), Fight (+6), Shoot (+6), Will (+8), or Armour (14). A figure may only have one upgrade activate a time, but they may use this power again to switch from one upgrade to another.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1795-c4e8-6ca2-380b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="7ab5-631f-fc46-da15" name="Toxic Claws" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8067-b351-6a6b-6afa" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d285-a670-f2c9-f9fe" name="Toxic Claws" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6939-3fb3-687a-2a0b" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="a0fe-2cdb-58ed-fb51" name="Toxic Claws" hidden="false">
+              <description>Self Only
+The figure immediately grows a set of indestructible claws. These count as a hand weapon, do +2 Damage, and are toxic.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6939-3fb3-687a-2a0b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="2e06-a01e-617d-9114" name="Toxic Secretion" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a7a-1c95-22ee-e0c7" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4059-06ef-8dcb-63a7" name="Toxic Secretion" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6939-3fb3-687a-2a0b" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (B)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="5d28-b749-3b73-d0dc" name="Toxic Secretion" hidden="false">
+              <description>Out of Game (B)
+The activator may select up to two members of their crew, including itself. All attacks made by those figures, including Shooting attacks, count as toxic for the next game.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6939-3fb3-687a-2a0b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="a9b9-27e6-b778-e4f8" name="Transport" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb2f-c6f9-3813-a753" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7af1-1904-46e8-93d9" name="Transport" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8702-3db8-4e88-faf8" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Line of Sight</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="8662-dccb-a6f5-1671" name="Transport" hidden="false">
+              <description>Line of Sight
+May target one member of the same crew that is within Line of Sight and 12” from the activator. This figure can be moved up to 6” in any direction (maintaining line of sight). If the figure was carrying a loot token, the token is dropped and not moved with the figure.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8702-3db8-4e88-faf8" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="f2a0-6141-9da0-ab42" name="Void Blade" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6f9-5400-3961-30ec" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ca10-5460-8a9d-69d7" name="Void Blade" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b054-68dc-0468" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="a1a4-0b28-b750-3b63" name="Void Blade" hidden="false">
+              <description>Self Only
+A figure must be carrying a hand weapon in order to use this power. This hand weapon becomes indestructible and does +2 Damage. In addition, the figure receives +3 Fight whenever they are rolling against a Shooting attack generated by a pistol, carbine, rapid-fire, or shotgun. This bonus does not stack with cover; the player should use whichever modifier is greater. If this figure ever becomes stunned, this power is immediately cancelled. A figure with an active void blade cannot use any weapon that takes up more than 1 gear slot.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2934-b054-68dc-0468" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="16de-bac1-0856-c3a7" name="Wall of Force" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69c4-1ba3-2d7c-156f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a23d-22ff-61ba-6771" name="Wall of Force" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e36-ac96-3132-f141" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="8fa1-bce8-9095-2919" name="Wall of Force" hidden="false">
+              <description>Self Only
+Creates an impenetrable, transparent wall, up to 6” long and 3” high anywhere within line of sight of the activator. This wall cannot be climbed (though any point it is anchored on may be). Grenade and grenade launcher attacks may be made over the wall. Figures may make a Shooting action at the wall. In that case, roll a die, on a 19–20, the wall is immediately cancelled.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e36-ac96-3132-f141" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="7976-8d72-a8fe-5900" name="Beast Call" publicationId="460c-b731-33cf-903c" page="14" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4100-6cf1-a853-cf4c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ab10-b27f-5682-5993" name="Beast Call" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a163-ca0d-f3a8-52fa" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Touch</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="438b-779b-d896-4810" name="Beast Call" hidden="false">
+              <description>This power has no specific target, instead immediately roll on the Random Encounter table (see Stargrave rulebook, page 140) and place that creature at a randomly determined point on the table edge. The figure that used the power may choose to reroll this randomly determined point, but in this case, the second roll must be accepted. The figure may not use this power again while this creature remains on the table.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d751-1414-48bf-f5b2" name="Crack Shot" publicationId="460c-b731-33cf-903c" page="14" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="172d-bd40-5e2a-26d7" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="67c2-e73e-aafb-cd60" name="Crack Shot" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a163-ca0d-f3a8-52fa" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="4aad-ff70-25b7-a1d6" name="Crack Shot" hidden="false">
+              <description>This figure now scores a critical hit on Shooting Attacks on a natural 19 or 20 (though not if the defender also rolls a 20). In addition, this figure never suffers a jam result for rolling a natural 1 on a shooting attack or for any other reason.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e61b-680c-7119-52e4" name="Contacts" publicationId="460c-b731-33cf-903c" page="14" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b35f-cc10-f4e7-5772" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="fe39-cd21-832a-b63c" name="Contacts" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bc20-7fbc-9e6d-b851" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game  (A)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="388d-7b7b-b393-06f5" name="Contacts" hidden="false">
+              <description>The figure has numerous contacts, especially when looking to buy specific items. The crew may select one item from any Advanced Technology table. The crew may buy this item at any point before the start of their next game.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6853-ea92-7a2c-9354" name="Indifference" publicationId="460c-b731-33cf-903c" page="14" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0596-eff6-66c0-c152" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4492-8574-8743-845a" name="Indifference" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bc20-7fbc-9e6d-b851" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self-Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="b144-f5a6-1b06-017c" name="Indifference" hidden="false">
+              <description>This figure is able to compartmentalize pain and shock so that it doesn&apos;t slow them down. For the rest of the game, this figure never counts as wounded. In addition, whenever the figure suffers damage that would normally stun it, the player may choose whether or not the figure is stunned.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0338-e3ce-d20c-aa6d" name="Inspiring" publicationId="460c-b731-33cf-903c" page="14" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffd0-4031-992a-a7fa" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4f08-7c90-e888-2108" name="Inspiring" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bc20-7fbc-9e6d-b851" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">1</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Self-Only</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="1db0-5be0-5abd-4382" name="Inspiring" hidden="false">
+              <description>This power may be used in two different ways: either the target figure immediately recovers from being stunned and suffers no penalties for this stunning during their own activation; or the target figure receives +1 Fight for the remainder of the game. A figure may never receive more than +1 Fight from the use of this power.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="54b7-2813-8a00-151e" name="Investments" publicationId="460c-b731-33cf-903c" page="15" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2975-31de-1442-e960" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="75d0-72cb-2b02-7e3f" name="Investments" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bc20-7fbc-9e6d-b851" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (A)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="a648-7730-55da-feba" name="Investments" hidden="false">
+              <description>The figure is a master of making money work. The crew immediately gains 50cr.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9e7d-1a89-b73d-de0f" name="Study Prey" publicationId="460c-b731-33cf-903c" page="15" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acf7-c9c5-7e94-a9a5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b54e-f942-aade-372d" name="Study Prey" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a163-ca0d-f3a8-52fa" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">12</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (A)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="e0ba-9836-f3cb-3781" name="Study Prey" hidden="false">
+              <description>If this figure&apos;s crew killed any uncontrolled creatures during the previous game, they receive +5 experience points for each creature, in addition to any experience points normally claimed from the experience point table or from the bonus expereince points for a scenario. A maximum of +25 experience points can be earned in this fashion, even if both the captain and first mate possess this power. These bonus experience points do not count against the 300 expereince point maximum for each game.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b428-e6f8-1281-3b11" name="Weapon Maintenance" publicationId="460c-b731-33cf-903c" page="15" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b6e-33ba-c1e7-6a0d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2412-8ea8-20f2-e7ce" name="Weapon Maintenance" hidden="false" typeId="a2e0-41b3-dd72-62cd" typeName="Power">
+              <modifierGroups>
+                <modifierGroup>
+                  <modifiers>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8749-37ea-6f9e-0824" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" field="1f90-ce6b-c67a-92fd" value="2">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a163-ca0d-f3a8-52fa" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <characteristics>
+                <characteristic name="Activation" typeId="1f90-ce6b-c67a-92fd">10</characteristic>
+                <characteristic name="Strain" typeId="c696-f8c0-ecd7-2a79">0</characteristic>
+                <characteristic name="Note" typeId="7838-c665-ec7e-a018">Out of Game (B)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="0c42-716d-91c6-527f" name="Weapon Maintenance" hidden="false">
+              <description>Select one carbine, shotgun, or pistol. That weapon becomes indestrctible, gains +1 damage, and never jams (Shooting Rolls of &apos;1&apos; trigger no special effects), for the duration of the next game.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="Gear Slot" typeId="ef24-ff59-caa4-b0e8" value="0"/>
+            <cost name="Cr" typeId="97c0-4241-980e-66e8" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
